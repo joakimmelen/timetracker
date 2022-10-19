@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
-import Calender from "./components/calender/Calender";
+import Calendar from "./components/calendar/Calendar";
 import OverviewList from "./components/OverviewList/OverviewList";
 import Timer from "./components/timer/Timer";
 import "./index.css";
@@ -18,7 +18,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/calender",
-        element: <Calender />,
+        element: <Calendar />,
       },
       {
         path: "/overview",
