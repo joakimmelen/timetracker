@@ -1,0 +1,13 @@
+{
+    "projects": [
+      { "id": 1, "name": "Projekt nr 1", "color": "#4E0E9F" }
+    ],
+    "tasks": [
+      { "id": 1, "projectId": 1, "title": "Läsa genom Reacts nya dokumentation" }
+    ],
+    "timelogs": [
+      { "id": 1, "taskId": 1, "start": "2022-10-12T10:49:33.081Z", "end": "2022-10-12T10:49:33.081Z" },
+      { "id": 2, "taskId": 1, "start": "2022-10-12T10:49:33.081Z", "end": "2022-10-12T10:49:33.081Z" },
+      { "id": 3, "taskId": 1, "start": "2022-10-12T10:49:33.081Z", "end": "2022-10-12T10:49:33.081Z" }
+    ]
+  }
