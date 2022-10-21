@@ -3,15 +3,22 @@ import { getProjects } from "../utils/api";
 import { useLoaderData } from "react-router";
 import { Link } from "react-router-dom";
 import NewProjectForm from "./NewProjectForm";
+import { useTimeTrackContext } from "../context/TimeTrackerContext";
 
 function Projects() {
-  const projectData = useLoaderData();
+  const { projects } = useTimeTrackContext();
 
   return (
     <div>
       <div>
-        <h1>Manage and creates Projects</h1>
-        {projectData}
+        <h3>Manage and Create Projects</h3>
+        <div>
+          <ul>
+            {projects.map((project) => (
+              <li key={project.id}>{project.name}</li>
+            ))}
+          </ul>
+        </div>
         <Link to={`/newproject`}>
           <button>Add Project</button>
         </Link>

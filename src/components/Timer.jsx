@@ -1,8 +1,14 @@
 import React from "react";
 
 function Timer() {
+  function handleClick() {
+    console.log(Date.now());
+  }
   return (
-    <div>HERE WE WEILL HAVE A ADVANCED TIMER FOR OUR TASKS AND PROJECTS</div>
+    <div>
+      <button onClick={handleClick}>Start</button>
+      <button onClick={handleClick}>Stop</button>
+    </div>
   );
 }
 

@@ -5,7 +5,7 @@ import { useTimeTrackContext } from "../context/TimeTrackerContext";
 function NewProjectForm() {
   const projectNameRef = useRef();
   const projectColorRef = useRef();
-  const { projects, addProject } = useTimeTrackContext();
+  const { addProject } = useTimeTrackContext();
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -14,7 +14,7 @@ function NewProjectForm() {
 
   return (
     <div>
-      <h2>Hej</h2>
+      <h2>Create Project</h2>
       <form onSubmit={handleSubmit}>
         <label htmlFor="projectName">Project Name</label>
         <input
@@ -35,13 +35,6 @@ function NewProjectForm() {
         </Link>
         <button type="submit">Submit</button>
       </form>
-      <div>
-        <ul>
-          {projects.map((project) => (
-            <li key={project.id}>{project.name}</li>
-          ))}
-        </ul>
-      </div>
     </div>
   );
 }

@@ -1,16 +1,6 @@
 {
   "projects": [
     {
-      "id": 1,
-      "name": "Projekt nr 1",
-      "color": "#4E0E9F"
-    },
-    {
-      "id": 2,
-      "name": "hej",
-      "color": "#000FFF"
-    },
-    {
       "name": "hej2",
       "color": "#000FFF",
       "id": 3
@@ -26,24 +16,54 @@
       "id": 5
     },
     {
-      "name": "boogiewoogie",
+      "name": "asdasdsda",
       "color": "#000000",
       "id": 6
     },
     {
-      "name": "tjjooogie",
+      "name": "asdasdsda",
       "color": "#000000",
       "id": 7
     },
     {
-      "name": "asdasdsadasd",
-      "color": "#008000",
+      "name": "asdasdsda",
+      "color": "#000000",
       "id": 8
     },
     {
-      "name": "asdasdsadasd",
-      "color": "#008000",
+      "name": "asdasdsda",
+      "color": "#000000",
       "id": 9
+    },
+    {
+      "name": "asdasdsda",
+      "color": "#000000",
+      "id": 10
+    },
+    {
+      "name": "asdasdsda",
+      "color": "#000000",
+      "id": 11
+    },
+    {
+      "name": "asdasdasd23423",
+      "color": "#000000",
+      "id": 12
+    },
+    {
+      "name": "asdasdasd23423",
+      "color": "#000000",
+      "id": 13
+    },
+    {
+      "name": "asdasdasd23423",
+      "color": "#000000",
+      "id": 14
+    },
+    {
+      "name": "asdasdasd23423",
+      "color": "#000000",
+      "id": 15
     }
   ],
   "tasks": [
@@ -51,6 +71,26 @@
       "id": 1,
       "projectId": 1,
       "title": "Läsa genom Reacts nya dokumentation"
+    },
+    {
+      "projectId": "",
+      "title": "hej2",
+      "id": 2
+    },
+    {
+      "projectId": "",
+      "title": "hej2",
+      "id": 3
+    },
+    {
+      "projectId": "",
+      "title": "hej2",
+      "id": 4
+    },
+    {
+      "projectId": "",
+      "title": "hej2",
+      "id": 5
     }
   ],
   "timelogs": [

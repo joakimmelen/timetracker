@@ -3,6 +3,7 @@ import Calendar from "./components/Calendar";
 import Overview from "./components/Overview";
 import Timer from "./components/Timer";
 import NewProjectForm from "./components/NewProjectForm";
+import NewTaskForm from "./components/NewTaskForm";
 import ErrorPage from "./pages/ErrorPage";
 import RootLayout from "./pages/RootLayout";
 import { TimeTrackerProvider } from "./context/TimeTrackerContext";
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
       {
         path: "newproject",
         element: <NewProjectForm />,
+      },
+      {
+        path: "newtask",
+        element: <NewTaskForm />,
       },
     ],
   },
