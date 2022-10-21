@@ -1,13 +1,76 @@
 {
-    "projects": [
-      { "id": 1, "name": "Projekt nr 1", "color": "#4E0E9F" }
-    ],
-    "tasks": [
-      { "id": 1, "projectId": 1, "title": "Läsa genom Reacts nya dokumentation" }
-    ],
-    "timelogs": [
-      { "id": 1, "taskId": 1, "start": "2022-10-12T10:49:33.081Z", "end": "2022-10-12T10:49:33.081Z" },
-      { "id": 2, "taskId": 1, "start": "2022-10-12T10:49:33.081Z", "end": "2022-10-12T10:49:33.081Z" },
-      { "id": 3, "taskId": 1, "start": "2022-10-12T10:49:33.081Z", "end": "2022-10-12T10:49:33.081Z" }
-    ]
-  }
+  "projects": [
+    {
+      "id": 1,
+      "name": "Projekt nr 1",
+      "color": "#4E0E9F"
+    },
+    {
+      "id": 2,
+      "name": "hej",
+      "color": "#000FFF"
+    },
+    {
+      "name": "hej2",
+      "color": "#000FFF",
+      "id": 3
+    },
+    {
+      "name": "hej23",
+      "color": "#000FFF",
+      "id": 4
+    },
+    {
+      "name": "vinnieboi",
+      "color": "#000000",
+      "id": 5
+    },
+    {
+      "name": "boogiewoogie",
+      "color": "#000000",
+      "id": 6
+    },
+    {
+      "name": "tjjooogie",
+      "color": "#000000",
+      "id": 7
+    },
+    {
+      "name": "asdasdsadasd",
+      "color": "#008000",
+      "id": 8
+    },
+    {
+      "name": "asdasdsadasd",
+      "color": "#008000",
+      "id": 9
+    }
+  ],
+  "tasks": [
+    {
+      "id": 1,
+      "projectId": 1,
+      "title": "Läsa genom Reacts nya dokumentation"
+    }
+  ],
+  "timelogs": [
+    {
+      "id": 1,
+      "taskId": 1,
+      "start": "2022-10-12T10:49:33.081Z",
+      "end": "2022-10-12T10:49:33.081Z"
+    },
+    {
+      "id": 2,
+      "taskId": 1,
+      "start": "2022-10-12T10:49:33.081Z",
+      "end": "2022-10-12T10:49:33.081Z"
+    },
+    {
+      "id": 3,
+      "taskId": 1,
+      "start": "2022-10-12T10:49:33.081Z",
+      "end": "2022-10-12T10:49:33.081Z"
+    }
+  ]
+}

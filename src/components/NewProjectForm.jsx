@@ -1,18 +1,15 @@
 import React, { useRef } from "react";
-import { Form, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { useTimeTrackContext } from "../context/TimeTrackerContext";
 
 function NewProjectForm() {
   const projectNameRef = useRef();
   const projectColorRef = useRef();
+  const { projects, addProject } = useTimeTrackContext();
 
-  async function handleSubmit(e) {
-    e.preventDefault;
-
-    await fetch("http://localhost:3000/projects", {
-      method: "POST",
-      mode: "cors",
-      body: JSON.stringify(jsonData),
-    });
+  function handleSubmit(e) {
+    e.preventDefault();
+    addProject(projectNameRef.current.value, projectColorRef.current.value);
   }
 
   return (
@@ -38,6 +35,13 @@ function NewProjectForm() {
         </Link>
         <button type="submit">Submit</button>
       </form>
+      <div>
+        <ul>
+          {projects.map((project) => (
+            <li key={project.id}>{project.name}</li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 }

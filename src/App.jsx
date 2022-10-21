@@ -5,6 +5,7 @@ import Timer from "./components/Timer";
 import NewProjectForm from "./components/NewProjectForm";
 import ErrorPage from "./pages/ErrorPage";
 import RootLayout from "./pages/RootLayout";
+import { TimeTrackerProvider } from "./context/TimeTrackerContext";
 
 const router = createBrowserRouter([
   {
@@ -37,7 +38,11 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <TimeTrackerProvider>
+      <RouterProvider router={router} />
+    </TimeTrackerProvider>
+  );
 }
 
 export default App;
