@@ -1,32 +1,27 @@
-import { useRef } from "react";
 import React from "react";
+import { getProjects } from "../utils/api";
+import { useLoaderData } from "react-router";
+import { Link } from "react-router-dom";
+import NewProjectForm from "./NewProjectForm";
 
 function Projects() {
-  const projectNameRef = useRef();
-  const projectColorRef = useRef();
-
-  function onSubmit(e) {
-    e.preventDefault();
-    console.log({
-      projectName: projectNameRef.current.value,
-      projectColor: projectColorRef.current.value,
-    });
-  }
+  const projectData = useLoaderData();
 
   return (
     <div>
       <div>
         <h1>Manage and creates Projects</h1>
-        <form onSubmit={onSubmit}>
-          <label htmlFor="projectName">Project Name</label>
-          <input type="text" ref={projectNameRef} id="projectName" />
-          <label htmlFor="projectColor">Project Color</label>
-          <input type="color" ref={projectColorRef} id="projectColor" />
-          <button type="submit">Submit</button>
-        </form>
+        {projectData}
+        <Link to={`/newproject`}>
+          <button>Add Project</button>
+        </Link>
       </div>
     </div>
   );
 }
 
 export default Projects;
+
+export function loader() {
+  return getProjects();
+}
