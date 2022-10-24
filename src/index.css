@@ -78,3 +78,18 @@ nav {
   left: 50%;
   background-color: black;
 }
+
+.topoverview {
+
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  gap: 50px;
+}
+
+.topoverview button {
+  background-color: whitesmoke;
+  color: #535bf2;
+}

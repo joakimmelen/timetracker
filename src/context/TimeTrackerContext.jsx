@@ -21,10 +21,10 @@ export function TimeTrackerProvider({ children }) {
   }, []);
   useEffect(updateProjects, []);
 
-  const addProject = useCallback((name, color) => {
+  const addProject = useCallback((title, color) => {
     axios
       .post("http://localhost:3000/projects", {
-        name,
+        title,
         color,
       })
       .then(() => {
@@ -37,10 +37,10 @@ export function TimeTrackerProvider({ children }) {
   }, []);
   useEffect(updateTasks, []);
 
-  const addTask = useCallback((projectId, title) => {
+  const addTask = useCallback((projectID, title) => {
     axios
       .post("http://localhost:3000/tasks", {
-        projectId,
+        projectID,
         title,
       })
       .then(() => {
@@ -53,10 +53,10 @@ export function TimeTrackerProvider({ children }) {
   }, []);
   useEffect(updateTimes, []);
 
-  const addTime = useCallback((taskId, start, end) => {
+  const addTime = useCallback((taskID, start, end) => {
     axios
       .post("http://localhost:3000/timelogs", {
-        taskId,
+        taskID,
         start,
         end,
       })

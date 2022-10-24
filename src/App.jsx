@@ -7,6 +7,8 @@ import NewTaskForm from "./components/NewTaskForm";
 import ErrorPage from "./pages/ErrorPage";
 import RootLayout from "./pages/RootLayout";
 import { TimeTrackerProvider } from "./context/TimeTrackerContext";
+import Projects from "./components/Projects";
+import Tasks from "./components/Tasks";
 
 const router = createBrowserRouter([
   {
@@ -15,12 +17,18 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       {
-        index: true,
+        path: "overview/*",
         element: <Overview />,
-      },
-      {
-        path: "overview",
-        element: <Overview />,
+        children: [
+          {
+            path: "",
+            element: <Projects />,
+          },
+          {
+            path: "",
+            element: <Tasks />,
+          },
+        ],
       },
       {
         path: "calendar",
@@ -37,6 +45,14 @@ const router = createBrowserRouter([
       {
         path: "newtask",
         element: <NewTaskForm />,
+      },
+      {
+        path: "overview/projects",
+        element: <Projects />,
+      },
+      {
+        path: "overview/tasks",
+        element: <Tasks />,
       },
     ],
   },

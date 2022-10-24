@@ -1,116 +1,47 @@
 {
   "projects": [
     {
-      "name": "hej2",
-      "color": "#000FFF",
+      "title": "Create A Homepage",
+      "color": "#000000",
+      "id": 1
+    },
+    {
+      "title": "Fix the shower",
+      "color": "#0000ff",
+      "id": 2
+    },
+    {
+      "title": "Enter the show",
+      "color": "#ff8040",
       "id": 3
-    },
-    {
-      "name": "hej23",
-      "color": "#000FFF",
-      "id": 4
-    },
-    {
-      "name": "vinnieboi",
-      "color": "#000000",
-      "id": 5
-    },
-    {
-      "name": "asdasdsda",
-      "color": "#000000",
-      "id": 6
-    },
-    {
-      "name": "asdasdsda",
-      "color": "#000000",
-      "id": 7
-    },
-    {
-      "name": "asdasdsda",
-      "color": "#000000",
-      "id": 8
-    },
-    {
-      "name": "asdasdsda",
-      "color": "#000000",
-      "id": 9
-    },
-    {
-      "name": "asdasdsda",
-      "color": "#000000",
-      "id": 10
-    },
-    {
-      "name": "asdasdsda",
-      "color": "#000000",
-      "id": 11
-    },
-    {
-      "name": "asdasdasd23423",
-      "color": "#000000",
-      "id": 12
-    },
-    {
-      "name": "asdasdasd23423",
-      "color": "#000000",
-      "id": 13
-    },
-    {
-      "name": "asdasdasd23423",
-      "color": "#000000",
-      "id": 14
-    },
-    {
-      "name": "asdasdasd23423",
-      "color": "#000000",
-      "id": 15
     }
   ],
   "tasks": [
     {
-      "id": 1,
-      "projectId": 1,
-      "title": "Läsa genom Reacts nya dokumentation"
+      "projectID": "1",
+      "title": "File for setStates",
+      "id": 1
     },
     {
-      "projectId": "",
-      "title": "hej2",
+      "projectID": "1",
+      "title": "Open effect",
       "id": 2
     },
     {
-      "projectId": "",
-      "title": "hej2",
+      "projectID": "2",
+      "title": "Clean the flooe ",
       "id": 3
     },
     {
-      "projectId": "",
-      "title": "hej2",
+      "projectID": "3",
+      "title": "Get new clothes",
       "id": 4
     },
     {
-      "projectId": "",
-      "title": "hej2",
+      "projectID": "1",
+      "title": "Charge them down",
       "id": 5
     }
   ],
-  "timelogs": [
-    {
-      "id": 1,
-      "taskId": 1,
-      "start": "2022-10-12T10:49:33.081Z",
-      "end": "2022-10-12T10:49:33.081Z"
-    },
-    {
-      "id": 2,
-      "taskId": 1,
-      "start": "2022-10-12T10:49:33.081Z",
-      "end": "2022-10-12T10:49:33.081Z"
-    },
-    {
-      "id": 3,
-      "taskId": 1,
-      "start": "2022-10-12T10:49:33.081Z",
-      "end": "2022-10-12T10:49:33.081Z"
-    }
-  ]
+  "timelogs": []
 }

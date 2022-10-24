@@ -1,7 +1,5 @@
 import React from "react";
-import { getTasks } from "../utils/api";
 import { Link } from "react-router-dom";
-import NewTaskForm from "./NewTaskForm";
 import { useTimeTrackContext } from "../context/TimeTrackerContext";
 
 function Projects() {
@@ -27,7 +25,3 @@ function Projects() {
 }
 
 export default Projects;
-
-export function loader() {
-  return getProjects();
-}
