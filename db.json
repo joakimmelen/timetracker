@@ -43,5 +43,56 @@
       "id": 5
     }
   ],
-  "timelogs": []
+  "timelogs": [
+    {
+      "projectID": "1",
+      "taskTitle": "Open effect",
+      "startDate": "Oct-25-2022",
+      "startTime": "11:06:14",
+      "endDate": "Oct-25-2022",
+      "endTime": "11:06:18",
+      "totalTimeInSeconds": 3,
+      "id": 1
+    },
+    {
+      "projectID": "1",
+      "taskTitle": "File for setStates",
+      "startDate": "Oct-25-2022",
+      "startTime": "11:38:25",
+      "endDate": "Oct-25-2022",
+      "endTime": "11:38:28",
+      "totalTimeInSeconds": 2,
+      "id": 2
+    },
+    {
+      "projectID": "1",
+      "taskTitle": "Charge them down",
+      "startDate": "Oct-25-2022",
+      "startTime": "11:38:33",
+      "endDate": "Oct-25-2022",
+      "endTime": "11:38:28",
+      "totalTimeInSeconds": 1,
+      "id": 3
+    },
+    {
+      "projectID": "2",
+      "taskTitle": "Clean the flooe ",
+      "startDate": "Oct-25-2022",
+      "startTime": "11:38:38",
+      "endDate": "Oct-25-2022",
+      "endTime": "11:38:34",
+      "totalTimeInSeconds": 4,
+      "id": 4
+    },
+    {
+      "projectID": "3",
+      "taskTitle": "Get new clothes",
+      "startDate": "Oct-25-2022",
+      "startTime": "11:38:46",
+      "endDate": "Oct-25-2022",
+      "endTime": "11:38:42",
+      "totalTimeInSeconds": 6,
+      "id": 5
+    }
+  ]
 }

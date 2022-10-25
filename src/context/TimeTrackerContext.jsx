@@ -53,17 +53,32 @@ export function TimeTrackerProvider({ children }) {
   }, []);
   useEffect(updateTimes, []);
 
-  const addTime = useCallback((taskID, start, end) => {
-    axios
-      .post("http://localhost:3000/timelogs", {
-        taskID,
-        start,
-        end,
-      })
-      .then(() => {
-        updateTimes();
-      });
-  }, []);
+  const addTime = useCallback(
+    (
+      projectID,
+      taskTitle,
+      startDate,
+      startTime,
+      endDate,
+      endTime,
+      totalTimeInSeconds
+    ) => {
+      axios
+        .post("http://localhost:3000/timelogs", {
+          projectID,
+          taskTitle,
+          startDate,
+          startTime,
+          endDate,
+          endTime,
+          totalTimeInSeconds,
+        })
+        .then(() => {
+          updateTimes();
+        });
+    },
+    []
+  );
 
   const providerValue = useMemo(() => {
     return {

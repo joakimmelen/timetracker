@@ -4,11 +4,14 @@ import dayjs from "dayjs";
 
 function Timer() {
   const [project, setProject] = useState();
-  const [projectTasks, setProjectTasks] = useState();
+  const [task, setTask] = useState();
+  const [projectTasks, setProjectTasks] = useState([]);
   const [seconds, setSeconds] = useState(0);
-  const [start, setStart] = useState("");
-  const [end, setEnd] = useState("");
-  const { projects, tasks } = useTimeTrackContext();
+  const [startDate, setStartDate] = useState("");
+  const [endDate, setEndDate] = useState("");
+  const [startTime, setStartTime] = useState("");
+  const [endTime, setEndTime] = useState("");
+  const { projects, tasks, times, addTime } = useTimeTrackContext();
 
   const renders = useRef(0);
   const timerId = useRef();
@@ -19,7 +22,8 @@ function Timer() {
   // };
 
   const startTimer = () => {
-    setStart(dayjs().format("YYYY-MM-DD HH:mm:ss"));
+    setStartDate(dayjs().format("MMM-DD-YYYY"));
+    setStartTime(dayjs().format("HH:mm:ss"));
     timerId.current = setInterval(() => {
       renders.current++;
       setSeconds((prev) => prev + 1);
@@ -27,7 +31,8 @@ function Timer() {
   };
 
   const stopTimer = () => {
-    setEnd(dayjs().format("YYYY-MM-DD HH:mm:ss"));
+    setEndDate(dayjs().format("MMM-DD-YYYY"));
+    setEndTime(dayjs().format("HH:mm:ss"));
     clearInterval(timerId.current);
     timerId.current = 0;
   };
@@ -35,13 +40,24 @@ function Timer() {
   const saveTime = () => {
     stopTimer();
     if (seconds) {
-      console.log(project, start, end);
+      addTime(project, task, startDate, startTime, endDate, endTime, seconds);
+
+      setSeconds(0);
     }
+  };
+
+  const resetTime = () => {
+    stopTimer();
+    setSeconds(0);
   };
 
   const handleProjectChange = (e) => {
     setProject(e.target.value);
-    const currentTasks = tasks.map((task) => if (task.projectID === project.id))
+    setProjectTasks(tasks.filter((task) => task.projectID == e.target.value));
+  };
+
+  const handleTaskChange = (e) => {
+    setTask(e.target.value);
   };
 
   return (
@@ -50,27 +66,47 @@ function Timer() {
       <select onChange={handleProjectChange} id="project">
         <option value="">--Please choose a project</option>
         {projects.map((project) => (
-          <option value={project.title} key={project.id}>
+          <option value={project.id} key={project.id}>
             {project.title}
           </option>
         ))}
       </select>
-      <p>Task</p>
-      <select onChange={(e) => setProjectTasks(e.target.value)} id="task">
-        <option value="">--Please choose a task</option>
-        {projectTasks.map((projectTask) => (
-          <option value={projectTask.title} key={projectTask.id}>
-            {projectTask.title}
-          </option>
-        ))}
-      </select>
+      {!project ? (
+        <p>Please choose a project..</p>
+      ) : (
+        <div>
+          {" "}
+          <p>Task</p>
+          <select onChange={handleTaskChange} id="task">
+            <option value="">--Please choose a task</option>
+            {projectTasks.map((task) => (
+              <option value={task.title} key={task.id}>
+                {task.title}
+              </option>
+            ))}
+          </select>
+        </div>
+      )}
 
       <section>
         <button onClick={startTimer}>Start</button>
         <button onClick={stopTimer}>Stop</button>
         <button onClick={saveTime}>Save</button>
+        <button onClick={resetTime}>Reset</button>
       </section>
-      <p>Seconds: {seconds} </p>
+      <p>Elapsed time: {seconds}s </p>
+
+      <div>
+        <ul>
+          {times
+            .filter((time) => time.projectID == project)
+            .map((time) => (
+              <li key={time.id}>
+                {time.taskTitle} for {time.totalTimeInSeconds}s
+              </li>
+            ))}
+        </ul>
+      </div>
     </div>
   );
 }
