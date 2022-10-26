@@ -35,7 +35,7 @@ function NewTaskForm() {
           ))}
         </select>
         <Link to={`/overview`}>
-          <button>Cancel</button>
+          <button>Back</button>
         </Link>
         <button type="submit">Submit</button>
       </form>

@@ -5,8 +5,8 @@ import RootStyles from "./RootLayout.module.css";
 
 function RootLayout() {
   return (
-    <div className={RootStyles.content}>
-      <div className={RootStyles.container}>
+    <div>
+      <div>
         <Outlet />
       </div>
       <NavBar />

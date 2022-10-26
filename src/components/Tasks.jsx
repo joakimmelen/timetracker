@@ -13,19 +13,19 @@ function Projects() {
     <div>
       <div>
         <h3>Manage and Create Tasks</h3>
-        <div>
-          <ul>
-            {tasks.map((task) => (
-              <li key={task.id}>
-                {task.title}
-                <button onClick={() => handleClick(task.id)}>x</button>
-              </li>
-            ))}
-          </ul>
-        </div>
         <Link to={`/newtask`}>
           <button>Add Task</button>
         </Link>
+      </div>
+      <div>
+        <ul>
+          {tasks.map((task) => (
+            <li key={task.id}>
+              {task.title}
+              <button onClick={() => handleClick(task.id)}>x</button>
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );

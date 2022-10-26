@@ -16,7 +16,12 @@ function NewProjectForm() {
 
   return (
     <div>
-      <h2>Create Project</h2>
+      <div>
+        <h2>Create Project</h2>
+        <Link to={`/overview`}>
+          <button>Back</button>
+        </Link>
+      </div>
       <form onSubmit={handleSubmit}>
         <label htmlFor="projectName">Project Name</label>
         <input
@@ -26,6 +31,7 @@ function NewProjectForm() {
           name="projectName"
           id="projectName"
         />
+        <br />
         <label htmlFor="projectColor">Project Color</label>
         <input
           type="color"
@@ -33,9 +39,6 @@ function NewProjectForm() {
           name="projectColor"
           id="projectColor"
         />
-        <Link to={`/overview`}>
-          <button>Back</button>
-        </Link>
         <button type="submit">Submit</button>
       </form>
     </div>

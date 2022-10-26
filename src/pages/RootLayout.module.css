@@ -5,7 +5,12 @@
 }
 
 html, body {
+    height: 100%;
+}
+
+body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    list-style: none;
 }
 
 .container {
@@ -13,5 +18,4 @@ html, body {
     margin: 0 auto;
     padding: 10px;
     overflow: none;
-
 }

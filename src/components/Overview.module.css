@@ -1,0 +1,21 @@
+.overview_topoverview { 
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 10px;
+}
+
+.overview_topoverview button {
+    font-size: 25px;
+    width: 50%;
+}
+
+.overview_isActive {
+    background-color: orange;
+}
+
+.overview_container {
+    display: flex;
+    justify-content: center;
+    margin: 10px auto;
+}

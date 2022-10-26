@@ -1,0 +1,56 @@
+.topcontainer {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    color: #333;
+}
+
+.topcontainer button {
+    background-color: rgb(62, 147, 85);
+    color: white;
+    padding: 5px;
+}
+
+.container {
+    padding-top: 5px;
+
+}
+
+.content {
+    padding: 10px;
+    font-size: 1.5rem;
+    border: 1px solid rgba(51, 51, 51, 0.167);
+  
+}
+
+li {
+    list-style: none;
+}
+
+h3 {
+    font-weight: 700;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    color: #333;
+}
+
+ul li {
+    display: flex;
+    justify-content: space-between;
+    background-color: whitesmoke;
+    align-items: center;
+    min-height: 2.5rem;
+}
+
+li button {
+    min-height: 30px;
+    min-width: 30px;
+    color: red;
+    font-weight: 600;
+    background-color: rgba(51, 51, 51, 0.26);
+    border: 1px solid rgba(51, 51, 51, 0.063);
+}
