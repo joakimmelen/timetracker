@@ -1,98 +1,48 @@
 {
   "projects": [
     {
-      "title": "Create A Homepage",
+      "title": "Fixa duschen",
       "color": "#000000",
       "id": 1
     },
     {
-      "title": "Fix the shower",
-      "color": "#0000ff",
-      "id": 2
-    },
-    {
-      "title": "Enter the show",
-      "color": "#ff8040",
+      "title": "Fixa koetboeallar",
+      "color": "#000000",
       "id": 3
     }
   ],
   "tasks": [
     {
-      "projectID": "1",
-      "title": "File for setStates",
-      "id": 1
-    },
-    {
-      "projectID": "1",
-      "title": "Open effect",
+      "projectId": 3,
+      "title": "A dimp",
       "id": 2
     },
     {
-      "projectID": "2",
-      "title": "Clean the flooe ",
-      "id": 3
-    },
-    {
-      "projectID": "3",
-      "title": "Get new clothes",
-      "id": 4
-    },
-    {
-      "projectID": "1",
-      "title": "Charge them down",
+      "projectId": 3,
+      "title": "Flicker n noise",
       "id": 5
     }
   ],
   "timelogs": [
     {
-      "projectID": "1",
-      "taskTitle": "Open effect",
-      "startDate": "Oct-25-2022",
-      "startTime": "11:06:14",
-      "endDate": "Oct-25-2022",
-      "endTime": "11:06:18",
-      "totalTimeInSeconds": 3,
-      "id": 1
-    },
-    {
-      "projectID": "1",
-      "taskTitle": "File for setStates",
-      "startDate": "Oct-25-2022",
-      "startTime": "11:38:25",
-      "endDate": "Oct-25-2022",
-      "endTime": "11:38:28",
-      "totalTimeInSeconds": 2,
-      "id": 2
-    },
-    {
-      "projectID": "1",
-      "taskTitle": "Charge them down",
-      "startDate": "Oct-25-2022",
-      "startTime": "11:38:33",
-      "endDate": "Oct-25-2022",
-      "endTime": "11:38:28",
-      "totalTimeInSeconds": 1,
-      "id": 3
-    },
-    {
-      "projectID": "2",
-      "taskTitle": "Clean the flooe ",
-      "startDate": "Oct-25-2022",
-      "startTime": "11:38:38",
-      "endDate": "Oct-25-2022",
-      "endTime": "11:38:34",
+      "projectId": 3,
+      "taskTitle": "Flicker n noise",
+      "startDate": "Oct-26-2022",
+      "startTime": "13:26:01",
+      "endDate": "",
+      "endTime": "",
       "totalTimeInSeconds": 4,
-      "id": 4
+      "id": 6
     },
     {
-      "projectID": "3",
-      "taskTitle": "Get new clothes",
-      "startDate": "Oct-25-2022",
-      "startTime": "11:38:46",
-      "endDate": "Oct-25-2022",
-      "endTime": "11:38:42",
-      "totalTimeInSeconds": 6,
-      "id": 5
+      "projectId": 3,
+      "taskTitle": "A dimp",
+      "startDate": "Oct-26-2022",
+      "startTime": "14:05:15",
+      "endDate": "",
+      "endTime": "",
+      "totalTimeInSeconds": 3,
+      "id": 7
     }
   ]
 }

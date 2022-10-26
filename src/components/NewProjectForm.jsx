@@ -1,15 +1,17 @@
-import React, { useRef } from "react";
+import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import { useTimeTrackContext } from "../context/TimeTrackerContext";
 
 function NewProjectForm() {
-  const projectNameRef = useRef();
+  const [projectName, setProjectName] = useState("");
+  const [projectAdded, setProjectAdded] = useState();
   const projectColorRef = useRef();
   const { addProject } = useTimeTrackContext();
 
   function handleSubmit(e) {
     e.preventDefault();
-    addProject(projectNameRef.current.value, projectColorRef.current.value);
+    addProject(projectName, projectColorRef.current.value);
+    setProjectName("");
   }
 
   return (
@@ -19,7 +21,8 @@ function NewProjectForm() {
         <label htmlFor="projectName">Project Name</label>
         <input
           type="text"
-          ref={projectNameRef}
+          onChange={(e) => setProjectName(e.target.value)}
+          value={projectName}
           name="projectName"
           id="projectName"
         />
@@ -31,7 +34,7 @@ function NewProjectForm() {
           id="projectColor"
         />
         <Link to={`/overview`}>
-          <button>Cancel</button>
+          <button>Back</button>
         </Link>
         <button type="submit">Submit</button>
       </form>

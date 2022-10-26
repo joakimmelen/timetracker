@@ -1,21 +1,18 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import NavStyles from "./NavBar.module.css";
 
 function NavBar() {
-  let activeStyle = {
-    TextDecoration: "underline",
-  };
-
-  let activeClassName = "underline";
-
   return (
     <div>
       <nav>
         <ul>
-          <li>
+          <li className={NavStyles.fudger}>
             <NavLink
               to="calendar"
-              style={({ isActive }) => (isActive ? activeStyle : undefined)}
+              className={({ isActive }) =>
+                isActive ? NavStyles.activeStyle : NavStyles.inactiveStyle
+              }
             >
               Calendar
             </NavLink>
@@ -23,7 +20,9 @@ function NavBar() {
           <li>
             <NavLink
               to="timer"
-              className={({ isActive }) => (isActive ? activeStyle : undefined)}
+              className={({ isActive }) =>
+                isActive ? NavStyles.activeStyle : NavStyles.inactiveStyle
+              }
             >
               Timer
             </NavLink>
@@ -31,7 +30,9 @@ function NavBar() {
           <li>
             <NavLink
               to="overview"
-              className={({ isActive }) => (isActive ? activeStyle : undefined)}
+              className={({ isActive }) =>
+                isActive ? NavStyles.activeStyle : NavStyles.inactiveStyle
+              }
             >
               Overview
             </NavLink>

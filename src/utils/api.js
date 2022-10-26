@@ -22,7 +22,7 @@ export async function getTimes() {
     return response
 }
 
-export async function getTasksForDate(date) {
+export async function getTimesForDate(date) {
     const response = await axios.get(`http://localhost:3000/timelogs?startDate=${date}`)
     if (!response) {
         throw { message: "Failed to fetch the timelogs", status: 500 }

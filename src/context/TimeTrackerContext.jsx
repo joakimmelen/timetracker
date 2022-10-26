@@ -32,20 +32,32 @@ export function TimeTrackerProvider({ children }) {
       });
   }, []);
 
+  const removeProject = useCallback((id) => {
+    axios.delete(`http://localhost:3000/projects/${id}`).then(() => {
+      updateProjects();
+    });
+  }, []);
+
   const updateTasks = useCallback(() => {
     getTasks().then((response) => setTasks(response.data));
   }, []);
   useEffect(updateTasks, []);
 
-  const addTask = useCallback((projectID, title) => {
+  const addTask = useCallback((projectId, title) => {
     axios
       .post("http://localhost:3000/tasks", {
-        projectID,
+        projectId,
         title,
       })
       .then(() => {
         updateTasks();
       });
+  }, []);
+
+  const removeTask = useCallback((id) => {
+    axios.delete(`http://localhost:3000/tasks/${id}`).then(() => {
+      updateTasks();
+    });
   }, []);
 
   const updateTimes = useCallback(() => {
@@ -55,7 +67,7 @@ export function TimeTrackerProvider({ children }) {
 
   const addTime = useCallback(
     (
-      projectID,
+      projectId,
       taskTitle,
       startDate,
       startTime,
@@ -65,7 +77,7 @@ export function TimeTrackerProvider({ children }) {
     ) => {
       axios
         .post("http://localhost:3000/timelogs", {
-          projectID,
+          projectId,
           taskTitle,
           startDate,
           startTime,
@@ -80,16 +92,35 @@ export function TimeTrackerProvider({ children }) {
     []
   );
 
+  const removeTime = useCallback((id) => {
+    axios.delete(`http://localhost:3000/timelogs/${id}`).then(() => {
+      updateTimes();
+    });
+  }, []);
+
   const providerValue = useMemo(() => {
     return {
       projects,
       addProject,
+      removeProject,
       tasks,
       addTask,
+      removeTask,
       times,
       addTime,
+      removeTime,
     };
-  }, [projects, addProject, tasks, addTask, times, addTime]);
+  }, [
+    projects,
+    addProject,
+    removeProject,
+    tasks,
+    addTask,
+    removeTask,
+    times,
+    addTime,
+    removeTime,
+  ]);
 
   return (
     <TimeTrackContext.Provider value={providerValue}>

@@ -3,7 +3,11 @@ import { Link } from "react-router-dom";
 import { useTimeTrackContext } from "../context/TimeTrackerContext";
 
 function Projects() {
-  const { tasks } = useTimeTrackContext();
+  const { tasks, removeTask } = useTimeTrackContext();
+
+  const handleClick = (id) => {
+    removeTask(id);
+  };
 
   return (
     <div>
@@ -12,7 +16,10 @@ function Projects() {
         <div>
           <ul>
             {tasks.map((task) => (
-              <li key={task.id}>{task.title}</li>
+              <li key={task.id}>
+                {task.title}
+                <button onClick={() => handleClick(task.id)}>x</button>
+              </li>
             ))}
           </ul>
         </div>

@@ -1,11 +1,14 @@
 import React from "react";
 import { Outlet } from "react-router";
 import NavBar from "../components/NavBar";
+import RootStyles from "./RootLayout.module.css";
 
 function RootLayout() {
   return (
-    <div>
-      <Outlet />
+    <div className={RootStyles.content}>
+      <div className={RootStyles.container}>
+        <Outlet />
+      </div>
       <NavBar />
     </div>
   );

@@ -1,37 +1,44 @@
-import dayjs from "dayjs";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Calendar as CalendarComp } from "react-calendar";
 import "react-calendar/dist/Calendar.css";
-import { getTasksForDate } from "../utils/api";
+import { getTimesForDate } from "../utils/api";
+import { useTimeTrackContext } from "../context/TimeTrackerContext";
 
 function Calendar() {
   const [date, setDate] = useState(new Date());
-  const [selectedDate, setSelectedDate] = useState(new Date());
-  const [tasks, setTasks] = useState([]);
+  const [list, setList] = useState([]);
+  const { times, removeTime } = useTimeTrackContext();
 
-  const updateTaskList = async () => {
-    const result = await getTasksForDate(selectedDate);
-    setTasks(result);
+  const updateList = async () => {
+    const result = await getTimesForDate(
+      date.toString().split(" ").slice(1, 4).join("-")
+    );
+    setList(result);
   };
 
-  const updateSelectedDate = () => {
-    setSelectedDate(date.toString().split(" ").slice(1, 4).join("-"));
-  };
+  useEffect(() => {
+    updateList();
+  }, [date]);
 
-  const onChange = (date) => {
-    setDate(date);
-    updateTaskList();
-    updateSelectedDate();
+  const handleClick = (id) => {
+    removeTime(id);
+    setTimeout(() => {
+      updateList();
+    }, 100);
   };
 
   return (
     <div>
-      <CalendarComp showWeekNumbers onChange={onChange} value={date} />
-      {tasks.data ? (
+      <CalendarComp showWeekNumbers onChange={setDate} value={date} />
+      {list.data ? (
         <ul>
-          {tasks.data.map((task) => console.log(task.taskTitle))}
-          {tasks.data.map((task) => {
-            <li>{task.taskTitle}</li>;
+          {list.data.map((time) => {
+            return (
+              <li key={time.id}>
+                {`${time.taskTitle} for ${time.totalTimeInSeconds}s @ ${time.startTime}`}
+                <button onClick={() => handleClick(time.id)}>x</button>
+              </li>
+            );
           })}
         </ul>
       ) : (

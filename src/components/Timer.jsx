@@ -11,15 +11,10 @@ function Timer() {
   const [endDate, setEndDate] = useState("");
   const [startTime, setStartTime] = useState("");
   const [endTime, setEndTime] = useState("");
-  const { projects, tasks, times, addTime } = useTimeTrackContext();
+  const { projects, tasks, times, addTime, removeTime } = useTimeTrackContext();
 
   const renders = useRef(0);
   const timerId = useRef();
-
-  // const handleChange = (e) => {
-  //   setRandomInput(e.target.value);
-  //   renders.current++;
-  // };
 
   const startTimer = () => {
     setStartDate(dayjs().format("MMM-DD-YYYY"));
@@ -40,8 +35,15 @@ function Timer() {
   const saveTime = () => {
     stopTimer();
     if (seconds) {
-      addTime(project, task, startDate, startTime, endDate, endTime, seconds);
-
+      addTime(
+        parseInt(project),
+        task,
+        startDate,
+        startTime,
+        endDate,
+        endTime,
+        seconds
+      );
       setSeconds(0);
     }
   };
@@ -53,11 +55,15 @@ function Timer() {
 
   const handleProjectChange = (e) => {
     setProject(e.target.value);
-    setProjectTasks(tasks.filter((task) => task.projectID == e.target.value));
+    setProjectTasks(tasks.filter((task) => task.projectId == e.target.value));
   };
 
   const handleTaskChange = (e) => {
     setTask(e.target.value);
+  };
+
+  const handleClick = (id) => {
+    removeTime(id);
   };
 
   return (
@@ -99,10 +105,11 @@ function Timer() {
       <div>
         <ul>
           {times
-            .filter((time) => time.projectID == project)
+            .filter((time) => time.projectId == project)
             .map((time) => (
               <li key={time.id}>
-                {time.taskTitle} for {time.totalTimeInSeconds}s
+                {time.taskTitle} for {time.totalTimeInSeconds}s{" "}
+                <button onClick={() => handleClick(time.id)}>x</button>
               </li>
             ))}
         </ul>

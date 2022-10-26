@@ -1,15 +1,16 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { useTimeTrackContext } from "../context/TimeTrackerContext";
 
 function NewTaskForm() {
-  const taskNameRef = useRef();
+  const [taskName, setTaskName] = useState("");
   const projectRef = useRef();
   const { addTask, projects } = useTimeTrackContext();
 
   function handleSubmit(e) {
     e.preventDefault();
-    addTask(projectRef.current.value, taskNameRef.current.value);
+    addTask(parseInt(projectRef.current.value), taskName);
+    setTaskName("");
   }
 
   return (
@@ -17,7 +18,13 @@ function NewTaskForm() {
       <h2>Create Task</h2>
       <form onSubmit={handleSubmit}>
         <label htmlFor="taskName">Task Name</label>
-        <input type="text" ref={taskNameRef} name="taskName" id="taskName" />
+        <input
+          type="text"
+          onChange={(e) => setTaskName(e.target.value)}
+          value={taskName}
+          name="taskName"
+          id="taskName"
+        />
         <label htmlFor="project">Project:</label>
         <select id="project" ref={projectRef}>
           <option value="">--Please choose a project</option>
