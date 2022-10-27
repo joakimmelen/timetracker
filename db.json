@@ -1,11 +1,6 @@
 {
   "projects": [
     {
-      "title": "Fixa duschen",
-      "color": "#000000",
-      "id": 1
-    },
-    {
       "title": "Fixa koetboeallar",
       "color": "#000000",
       "id": 3
@@ -19,13 +14,13 @@
   "tasks": [
     {
       "projectId": 3,
-      "title": "A dimp",
-      "id": 2
-    },
-    {
-      "projectId": 3,
       "title": "Flicker n noise",
       "id": 5
+    },
+    {
+      "projectId": 4,
+      "title": "pussap ussa saaaaaaaara",
+      "id": 6
     }
   ],
   "timelogs": [
@@ -40,14 +35,14 @@
       "id": 6
     },
     {
-      "projectId": 3,
-      "taskTitle": "A dimp",
-      "startDate": "Oct-26-2022",
-      "startTime": "14:05:15",
+      "projectId": 4,
+      "taskTitle": "pussap ussa saaaaaaaara",
+      "startDate": "Oct-27-2022",
+      "startTime": "07:40:47",
       "endDate": "",
       "endTime": "",
-      "totalTimeInSeconds": 3,
-      "id": 7
+      "totalTimeInSeconds": 6,
+      "id": 9
     }
   ]
 }
