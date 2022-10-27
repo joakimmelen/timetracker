@@ -1,7 +1,7 @@
 import React from "react";
-import { getProjects } from "../utils/api";
 import { Link } from "react-router-dom";
 import { useTimeTrackContext } from "../context/TimeTrackerContext";
+import styles from "./Projects.module.css";
 
 function Projects() {
   const { projects, removeProject } = useTimeTrackContext();
@@ -11,19 +11,24 @@ function Projects() {
   };
 
   return (
-    <div>
-      <div>
-        <h3>Manage and Create Projects</h3>
+    <div className={styles.container}>
+      <div className={styles.topcontainer}>
+        <h3 className={styles.h3}>Manage and Create Projects</h3>
         <Link to={`/newproject`}>
           <button>Add Project</button>
         </Link>
       </div>
-      <div>
-        <ul>
+      <div className={styles.content}>
+        <ul className={styles.ul}>
           {projects.map((project) => (
-            <li key={project.id}>
+            <li className={styles.li} key={project.id}>
               {project.title}
-              <button onClick={() => handleClick(project.id)}>x</button>
+              <button
+                className={styles.removeButton}
+                onClick={() => handleClick(project.id)}
+              >
+                x
+              </button>
             </li>
           ))}
         </ul>
@@ -34,6 +39,6 @@ function Projects() {
 
 export default Projects;
 
-export function loader() {
-  return getProjects();
-}
+// export function loader() {
+//   return getProjects();
+// }

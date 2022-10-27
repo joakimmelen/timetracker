@@ -1,6 +1,7 @@
 import { useState, useRef } from "react";
 import { useTimeTrackContext } from "../context/TimeTrackerContext";
 import dayjs from "dayjs";
+import styles from "./Timer.module.css";
 
 function Timer() {
   const [project, setProject] = useState();
@@ -67,8 +68,8 @@ function Timer() {
   };
 
   return (
-    <div>
-      <p>Project</p>
+    <div className={styles.container}>
+      <p className={styles.p}>Project</p>
       <select onChange={handleProjectChange} id="project">
         <option value="">--Please choose a project</option>
         {projects.map((project) => (
@@ -78,11 +79,11 @@ function Timer() {
         ))}
       </select>
       {!project ? (
-        <p>Please choose a project..</p>
+        <p className={styles.p}>Please choose a project..</p>
       ) : (
         <div>
           {" "}
-          <p>Task</p>
+          <p className={styles.p}>Task</p>
           <select onChange={handleTaskChange} id="task">
             <option value="">--Please choose a task</option>
             {projectTasks.map((task) => (
@@ -94,20 +95,20 @@ function Timer() {
         </div>
       )}
 
-      <section>
+      <section className={styles.timer}>
         <button onClick={startTimer}>Start</button>
         <button onClick={stopTimer}>Stop</button>
         <button onClick={saveTime}>Save</button>
         <button onClick={resetTime}>Reset</button>
+        <p>Elapsed time: {seconds}s </p>
       </section>
-      <p>Elapsed time: {seconds}s </p>
 
-      <div>
-        <ul>
+      <div className={styles.tasklist}>
+        <ul className={styles.ul}>
           {times
             .filter((time) => time.projectId == project)
             .map((time) => (
-              <li key={time.id}>
+              <li className={styles.li} key={time.id}>
                 {time.taskTitle} for {time.totalTimeInSeconds}s{" "}
                 <button onClick={() => handleClick(time.id)}>x</button>
               </li>

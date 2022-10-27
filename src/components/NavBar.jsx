@@ -5,9 +5,9 @@ import NavStyles from "./NavBar.module.css";
 function NavBar() {
   return (
     <div>
-      <nav>
-        <ul>
-          <li className={NavStyles.fudger}>
+      <nav className={NavStyles.navigator}>
+        <ul className={NavStyles.ulcontainer}>
+          <li className={NavStyles.lifudge}>
             <NavLink
               to="calendar"
               className={({ isActive }) =>
@@ -17,7 +17,7 @@ function NavBar() {
               Calendar
             </NavLink>
           </li>
-          <li>
+          <li className={NavStyles.lifudge}>
             <NavLink
               to="timer"
               className={({ isActive }) =>
@@ -27,7 +27,7 @@ function NavBar() {
               Timer
             </NavLink>
           </li>
-          <li>
+          <li className={NavStyles.lifudge}>
             <NavLink
               to="overview"
               className={({ isActive }) =>

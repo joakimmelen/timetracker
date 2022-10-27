@@ -1,4 +1,4 @@
-nav {
+.navigator {
     background-color: #333;
     color: white;
     display: flex;
@@ -10,7 +10,7 @@ nav {
     width: 100vw;
 }
 
-nav ul {
+.ulcontainer {
     text-decoration: none;
     padding: 0;
     margin: 0;
@@ -18,7 +18,7 @@ nav ul {
     display: flex;
     gap: 1rem;
 }
-nav li {
+.lifudge {
     text-decoration: none;
     height: 100%;
     display: flex;

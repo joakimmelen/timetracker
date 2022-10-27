@@ -7,7 +7,7 @@ import { useTimeTrackContext } from "../context/TimeTrackerContext";
 function Calendar() {
   const [date, setDate] = useState(new Date());
   const [list, setList] = useState([]);
-  const { times, removeTime } = useTimeTrackContext();
+  const { removeTime } = useTimeTrackContext();
 
   const updateList = async () => {
     const result = await getTimesForDate(

@@ -9,31 +9,31 @@
       "title": "Koepa salsa till salzcicoa och springa på stan",
       "color": "#000000",
       "id": 4
+    },
+    {
+      "title": "Do the disco dance",
+      "color": "#1581f4",
+      "id": 5
     }
   ],
   "tasks": [
     {
-      "projectId": 3,
-      "title": "Flicker n noise",
-      "id": 5
-    },
-    {
       "projectId": 4,
       "title": "pussap ussa saaaaaaaara",
       "id": 6
+    },
+    {
+      "projectId": 3,
+      "title": "Help marcuzz",
+      "id": 7
+    },
+    {
+      "projectId": 5,
+      "title": "Back flip",
+      "id": 8
     }
   ],
   "timelogs": [
-    {
-      "projectId": 3,
-      "taskTitle": "Flicker n noise",
-      "startDate": "Oct-26-2022",
-      "startTime": "13:26:01",
-      "endDate": "",
-      "endTime": "",
-      "totalTimeInSeconds": 4,
-      "id": 6
-    },
     {
       "projectId": 4,
       "taskTitle": "pussap ussa saaaaaaaara",
@@ -43,6 +43,56 @@
       "endTime": "",
       "totalTimeInSeconds": 6,
       "id": 9
+    },
+    {
+      "projectId": 3,
+      "taskTitle": "Help marcuzz",
+      "startDate": "Oct-27-2022",
+      "startTime": "09:32:46",
+      "endDate": "Oct-27-2022",
+      "endTime": "09:32:37",
+      "totalTimeInSeconds": 8,
+      "id": 11
+    },
+    {
+      "projectId": 3,
+      "taskTitle": "Flicker n noise",
+      "startDate": "Oct-27-2022",
+      "startTime": "09:33:17",
+      "endDate": "Oct-27-2022",
+      "endTime": "09:32:54",
+      "totalTimeInSeconds": 1,
+      "id": 12
+    },
+    {
+      "projectId": 5,
+      "taskTitle": "Back flip",
+      "startDate": "Oct-27-2022",
+      "startTime": "09:34:15",
+      "endDate": "",
+      "endTime": "",
+      "totalTimeInSeconds": 22,
+      "id": 13
+    },
+    {
+      "projectId": 3,
+      "taskTitle": "Help marcuzz",
+      "startDate": "Oct-27-2022",
+      "startTime": "11:48:13",
+      "endDate": "Oct-27-2022",
+      "endTime": "11:48:11",
+      "totalTimeInSeconds": 21,
+      "id": 14
+    },
+    {
+      "projectId": 4,
+      "taskTitle": "pussap ussa saaaaaaaara",
+      "startDate": "Oct-27-2022",
+      "startTime": "11:48:42",
+      "endDate": "",
+      "endTime": "",
+      "totalTimeInSeconds": 5,
+      "id": 15
     }
   ]
 }

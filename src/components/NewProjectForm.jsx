@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import { useTimeTrackContext } from "../context/TimeTrackerContext";
+import styles from "./NewForm.module.css";
 
 function NewProjectForm() {
   const [projectName, setProjectName] = useState("");
@@ -15,14 +16,14 @@ function NewProjectForm() {
   }
 
   return (
-    <div>
-      <div>
+    <div className={styles.container}>
+      <div className={styles.topcontainer}>
         <h2>Create Project</h2>
         <Link to={`/overview`}>
           <button>Back</button>
         </Link>
       </div>
-      <form onSubmit={handleSubmit}>
+      <form className={styles.formular} onSubmit={handleSubmit}>
         <label htmlFor="projectName">Project Name</label>
         <input
           type="text"
@@ -30,6 +31,7 @@ function NewProjectForm() {
           value={projectName}
           name="projectName"
           id="projectName"
+          autoComplete="off"
         />
         <br />
         <label htmlFor="projectColor">Project Color</label>

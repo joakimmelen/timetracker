@@ -1,45 +1,42 @@
-.tasks-topcontainer {
+.topcontainer {
     display: flex;
     flex-direction: column;
     padding: 20px;
     color: #333;
-    
+    align-items: center;
 }
 
-.tasks-topcontainer button {
+.topcontainer button {
     background-color: rgb(62, 147, 85);
     color: white;
     padding: 5px;
 }
 
-.tasks-container {
+.container {
     padding-top: 5px;
 
 }
 
-.tasks-content {
+.content {
     padding: 10px;
     font-size: 1.5rem;
     border: 1px solid rgba(51, 51, 51, 0.167);
-
+  
 }
 
-li {
-    list-style: none;
-}
-
-h3 {
+.h3 {
     font-weight: 700;
 }
 
-ul {
+.ul {
     display: flex;
     flex-direction: column;
     gap: 5px;
     color: #333;
+    list-style: none;
 }
 
-ul li {
+.ul li {
     display: flex;
     justify-content: space-between;
     background-color: whitesmoke;
@@ -47,9 +44,9 @@ ul li {
     min-height: 2.5rem;
 }
 
-li button {
-    height: 30px;
-    width: 30px;
+.removeButton {
+    min-height: 30px;
+    min-width: 30px;
     color: red;
     font-weight: 600;
     background-color: rgba(51, 51, 51, 0.26);

@@ -1,0 +1,63 @@
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    
+}
+
+.p {
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.timer {
+    margin: 50px;
+    display: grid;
+    grid-template-columns: 6fr 1fr;
+    grid-template-rows: auto;
+    align-self: center;
+    gap: 15px 30px;
+    width: 80vw;
+}
+
+.timer button {
+    height: 50px;
+    font-size: 1.8rem;
+    font-weight: bolder;
+}
+
+.timer p {
+    font-size: 1.5rem;
+}
+
+.tasklist {
+    padding: 20px;
+    margin: 30px;
+}
+
+.ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.li {
+    display: flex;
+    justify-content: space-between;
+    width: 70vw;
+    height: 2rem;
+    margin: 5px;
+    font-size: 1.2rem;
+}
+
+.li button {
+    width: 2rem;
+    height: 2rem;
+    color: red;
+    background-color: #333;
+}

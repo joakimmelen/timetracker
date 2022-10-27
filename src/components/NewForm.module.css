@@ -1,0 +1,42 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+}
+
+.topcontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 200px 0;
+}
+
+.topcontainer button {
+    height: 50px;
+    width: 80px;
+    background-color: green;
+    color: whitesmoke;
+}
+
+.formular {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formular button {
+    background-color: #333;
+    color: whitesmoke;
+    height: 50px;
+    width: 100px;
+    margin: 10px;
+}
+
+.formular input {
+    height: 1.5rem;
+}
+
+.forumlar select {
+    height: 1.5rem;
+}
