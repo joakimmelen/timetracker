@@ -26,7 +26,7 @@ Here we are..
 "axios": "^1.1.3" https://github.com/axios/axios
 
 #### Day.js  
-Started using regular dates. But, then again, with some.. lets call it input.. from other classmates I felt force to try, and use, Day.js.  
+Started using regular dates. But, then again, with some.. lets call it input.. from other classmates I felt forced to try, and use, Day.js.  
 "dayjs": "^1.11.6" https://day.js.org/
 
 #### JSON Server  
