@@ -3,6 +3,7 @@ import { Calendar as CalendarComp } from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 import { getTimesForDate } from "../utils/api";
 import { useTimeTrackContext } from "../context/TimeTrackerContext";
+import styles from "./Calendar.module.css";
 
 function Calendar() {
   const [date, setDate] = useState(new Date());
@@ -28,13 +29,18 @@ function Calendar() {
   };
 
   return (
-    <div>
-      <CalendarComp showWeekNumbers onChange={setDate} value={date} />
+    <div className={styles.container}>
+      <CalendarComp
+        className={styles.calendar}
+        showWeekNumbers
+        onChange={setDate}
+        value={date}
+      />
       {list.data ? (
-        <ul>
+        <ul className={styles.ul}>
           {list.data.map((time) => {
             return (
-              <li key={time.id}>
+              <li className={styles.li} key={time.id}>
                 {`${time.taskTitle} for ${time.totalTimeInSeconds}s @ ${time.startTime}`}
                 <button onClick={() => handleClick(time.id)}>x</button>
               </li>
